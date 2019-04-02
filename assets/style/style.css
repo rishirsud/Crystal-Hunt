@@ -1,5 +1,44 @@
-.crystal-image {
-  height: 100px;
-  width: 100px;
+.square {
+  height: 200px;
+  width: 200px;
   background-color: lightskyblue;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid green;
+}
+
+.diamond {
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-bottom-color: orange;
+  position: relative;
+  top: -100px;
+}
+.diamond:after {
+  content: '';
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-top-color: orange;
+}
+
+.cm-card{
+  height: 152px;
+  width: 286px;
 }

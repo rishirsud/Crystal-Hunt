@@ -14,32 +14,61 @@
 <body>
 
   <header>
-    <div class="container">
-          <h1>Crystal Game</h1>
-         <p>Select the correct crystals to reach your maximum carry weight</p> 
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Crystal Guessing Game</h1>
+        <p class="lead">By clicking one of the four crystals below you will start the game and add its value to your score.</p>
+        <p>Each crystal has been assigned a value randomly.</p>
+        <p>Your job is to pick up enough crystals to reach the required amount.</p>
+        <p>If you go over, you lose. You <strong>must</strong> only pick up what you need.</p>
+      </div>
+    </div>
   </header>
 
 
   <div class="container">
-    <div class="row mx-auto">
-      <div class="col-3">
+    <div class="row">
+      <div class="col-3 col-md-3 col-sm-6">
         <div id="crystal-1">
-          <div class="crystal-image"></div>
+          <div class="square"></div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-3 col-sm-6">
         <div id="crystal-2">
-          <div class="crystal-image"></div>
+          <div class="circle"></div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-3 col-sm-6">
         <div id="crystal-3">
-          <div class="crystal-image"></div>
+          <div class="triangle"></div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-md-3 col-sm-6">
         <div id="crystal-4">
-          <div class="crystal-image"></div>
+          <div class="diamond"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-6 col-sm-6">
+          <div class="card cm-card my-5 mx-auto" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">Crystals Needed: <span id="requiredCrystals">-</span></h4>
+              <h5 class="card-title">Wins: <span id="winCounter">-</span></h5>
+              <h5 class="card-title">Losses: <span id="lossCounter">-</span></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-6 col-sm-6">
+          <div class="card cm-card my-5 mx-auto" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title text-center">Your Crystals <h1 id="currentCrystals" class="text-center">-</h1>
+              </h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>

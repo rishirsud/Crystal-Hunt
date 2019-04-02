@@ -1,13 +1,17 @@
 $(document).ready(function () {
 
   // console logs will only be displayed when debug is set to true
-  const debug = true;
+  const debug = false;
 
   let wins = 0;
   let losses = 0;
   let currPoints = 0;
   let required = 0;
   let howManyCrystals = 4;
+  let $requiredCrystals = $('#requiredCrystals');
+  let $winCounter = $('#winCounter');
+  let $lossCounter = $('#lossCounter');
+  let $currentCrystals = $('#currentCrystals');
 
   function log(message) {
     if (debug) {
@@ -19,6 +23,7 @@ $(document).ready(function () {
   function requiredCrystals() {
     required = Math.floor(Math.random() * (120 - 19 + 1) + 19);
     log(`Points needed: ${required}`);
+    $requiredCrystals.text(required);
     return required;
   };
 
@@ -44,6 +49,9 @@ $(document).ready(function () {
     requiredCrystals();
     crystalValueSetter();
     log(`Wins: ${wins} Losses: ${losses}`);
+    $winCounter.text(wins);
+    $lossCounter.text(losses);
+    $currentCrystals.text("-");
     log("*********************");
   };
 
@@ -52,6 +60,7 @@ $(document).ready(function () {
     let crystalVal = parseInt($(this).attr("crystal-value"));
     currPoints += crystalVal;
     log(`Current points: ${currPoints}`);
+    $currentCrystals.text(currPoints);
 
     if (currPoints === required) {
       wins++;
