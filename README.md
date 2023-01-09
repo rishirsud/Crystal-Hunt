@@ -3,4 +3,4 @@ Four crystals are randomly assigned values and the player must guess which ones 
 If player picks up too many crystals, they will lose, then the game will reset.\
 If the player picks exactly the required amount, they will win, then the game will reset.
 
-[Deployed Here](https://rishirsud.github.io/unit-4-game/)
+[Deployed Here](https://rishirsud.github.io/Crystal-Hunt/)
